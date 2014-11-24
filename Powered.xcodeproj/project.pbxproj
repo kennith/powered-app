@@ -14,6 +14,7 @@
 		5F29A9CB1A20E96600656B92 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F29A9C91A20E96600656B92 /* LaunchScreen.xib */; };
 		5F29A9D71A20E96600656B92 /* PoweredTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F29A9D61A20E96600656B92 /* PoweredTests.swift */; };
 		5F2F89E01A22BAF400951E16 /* PlayAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F89DF1A22BAF400951E16 /* PlayAudioViewController.swift */; };
+		5F2F89E21A22E4ED00951E16 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F2F89E11A22E4ED00951E16 /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5F29A9D51A20E96600656B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F29A9D61A20E96600656B92 /* PoweredTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoweredTests.swift; sourceTree = "<group>"; };
 		5F2F89DF1A22BAF400951E16 /* PlayAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayAudioViewController.swift; sourceTree = "<group>"; };
+		5F2F89E11A22E4ED00951E16 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = ../movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		5F29A9BE1A20E96500656B92 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5F2F89E11A22E4ED00951E16 /* movie_quote.mp3 */,
 				5F29A9BF1A20E96500656B92 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -197,6 +200,7 @@
 			files = (
 				5F29A9C61A20E96600656B92 /* Main.storyboard in Resources */,
 				5F29A9CB1A20E96600656B92 /* LaunchScreen.xib in Resources */,
+				5F2F89E21A22E4ED00951E16 /* movie_quote.mp3 in Resources */,
 				5F29A9C81A20E96600656B92 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

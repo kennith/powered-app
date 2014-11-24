@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aWn-TP-nbR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aWn-TP-nbR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -110,12 +111,70 @@
                     <view key="view" contentMode="scaleToFill" id="ofL-WW-cWv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipI-0N-Sjd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="snail">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQL-hF-6s4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="rabbit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzo-Q4-kd6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Pzo-Q4-kd6" secondAttribute="centerX" constant="-1" id="WbL-fJ-HiN"/>
+                            <constraint firstItem="ipI-0N-Sjd" firstAttribute="leading" secondItem="ofL-WW-cWv" secondAttribute="leadingMargin" constant="50" id="f43-9C-opR"/>
+                            <constraint firstItem="W6v-SA-Q9a" firstAttribute="top" secondItem="Pzo-Q4-kd6" secondAttribute="bottom" constant="85" id="klF-ga-UlG"/>
+                            <constraint firstItem="AQL-hF-6s4" firstAttribute="top" secondItem="Adp-Ji-3KN" secondAttribute="bottom" constant="100" id="tE3-6z-pcj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AQL-hF-6s4" secondAttribute="trailing" constant="50" id="vHU-bu-yzu"/>
+                            <constraint firstItem="ipI-0N-Sjd" firstAttribute="top" secondItem="Adp-Ji-3KN" secondAttribute="bottom" constant="100" id="yOY-kP-IDj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ipI-0N-Sjd"/>
+                                <exclude reference="AQL-hF-6s4"/>
+                                <exclude reference="Pzo-Q4-kd6"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="f43-9C-opR"/>
+                                <exclude reference="yOY-kP-IDj"/>
+                                <exclude reference="tE3-6z-pcj"/>
+                                <exclude reference="vHU-bu-yzu"/>
+                                <exclude reference="WbL-fJ-HiN"/>
+                                <exclude reference="klF-ga-UlG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="ipI-0N-Sjd"/>
+                                <include reference="AQL-hF-6s4"/>
+                                <include reference="Pzo-Q4-kd6"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="f43-9C-opR"/>
+                                <include reference="yOY-kP-IDj"/>
+                                <include reference="tE3-6z-pcj"/>
+                                <include reference="vHU-bu-yzu"/>
+                                <include reference="WbL-fJ-HiN"/>
+                                <include reference="klF-ga-UlG"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ck9-xW-Pxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1489" y="-19.5"/>
+            <point key="canvasLocation" x="1487" y="-19.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Li-vR-6Ps">
@@ -138,6 +197,8 @@
     </scenes>
     <resources>
         <image name="microphone" width="48" height="48"/>
+        <image name="rabbit" width="100" height="100"/>
+        <image name="snail" width="100" height="100"/>
         <image name="stop" width="48" height="48"/>
     </resources>
 </document>

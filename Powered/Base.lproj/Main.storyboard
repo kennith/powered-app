@@ -8,7 +8,7 @@
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Powered" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordAudioViewController" customModule="Powered" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -39,7 +39,7 @@
                                 </state>
                                 <connections>
                                     <action selector="stopAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KMc-Yv-yJm"/>
-                                    <segue destination="DEo-Vh-xit" kind="show" id="gB8-VM-9wb"/>
+                                    <segue destination="DEo-Vh-xit" kind="show" id="ofA-Sa-Efo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="-19.5"/>
+            <point key="canvasLocation" x="847" y="-19.5"/>
         </scene>
         <!--Play Audio View Controller-->
         <scene sceneID="aCX-gt-6uw">

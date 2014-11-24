@@ -9,13 +9,14 @@
 import UIKit
 import AVFoundation
 
-class RecordAudioViewController: UIViewController {
+class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
 	
 	@IBOutlet weak var recordLabel: UILabel!
 	@IBOutlet weak var stopButton: UIButton!
 	@IBOutlet weak var microphoneButton: UIButton!
 	
 	var audioRecorder:AVAudioRecorder!
+	var recordedAudio:RecordedAudio!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -47,6 +48,7 @@ class RecordAudioViewController: UIViewController {
 		session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
 		
 		audioRecorder = AVAudioRecorder(URL: filePath, settings: nil, error: nil)
+		audioRecorder.delegate = self
 		audioRecorder.meteringEnabled = true
 		audioRecorder.record()
 		
@@ -55,6 +57,26 @@ class RecordAudioViewController: UIViewController {
 		microphoneButton.enabled = false
 		stopButton.hidden = false
 		println("Button Click")
+	}
+	
+	func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
+		// TODO: 
+		if(flag) {
+			recordedAudio = RecordedAudio()
+			recordedAudio.filePathUrl = recorder.url
+			recordedAudio.title = recorder.url.lastPathComponent
+			// TODO: Segue
+			performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+		} else {
+			println("segue did not complete")
+			microphoneButton.enabled = true
+			stopButton.hidden = true
+		}
+		
+	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		<#code#>
 	}
 	
 	@IBAction func stopAction(sender: UIButton) {

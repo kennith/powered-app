@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aWn-TP-nbR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -39,7 +40,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KMc-Yv-yJm"/>
-                                    <segue destination="DEo-Vh-xit" kind="show" id="ofA-Sa-Efo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,6 +94,7 @@
                         <outlet property="microphoneButton" destination="n4d-sF-yxQ" id="bbf-rw-Mh1"/>
                         <outlet property="recordLabel" destination="oez-hl-AGR" id="v4G-ht-TSV"/>
                         <outlet property="stopButton" destination="1aL-8e-1Te" id="XXy-Bq-KHL"/>
+                        <segue destination="DEo-Vh-xit" kind="show" identifier="stopRecording" id="oQn-yJ-ibh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -156,12 +157,12 @@
                                 <exclude reference="Pzo-Q4-kd6"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="f43-9C-opR"/>
-                                <exclude reference="yOY-kP-IDj"/>
+                                <exclude reference="klF-ga-UlG"/>
                                 <exclude reference="tE3-6z-pcj"/>
                                 <exclude reference="vHU-bu-yzu"/>
                                 <exclude reference="WbL-fJ-HiN"/>
-                                <exclude reference="klF-ga-UlG"/>
+                                <exclude reference="f43-9C-opR"/>
+                                <exclude reference="yOY-kP-IDj"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -171,12 +172,12 @@
                                 <include reference="Pzo-Q4-kd6"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="f43-9C-opR"/>
-                                <include reference="yOY-kP-IDj"/>
+                                <include reference="klF-ga-UlG"/>
                                 <include reference="tE3-6z-pcj"/>
                                 <include reference="vHU-bu-yzu"/>
                                 <include reference="WbL-fJ-HiN"/>
-                                <include reference="klF-ga-UlG"/>
+                                <include reference="f43-9C-opR"/>
+                                <include reference="yOY-kP-IDj"/>
                             </mask>
                         </variation>
                     </view>
@@ -201,7 +202,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PG-P9-Jfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11" y="-13.5"/>
+            <point key="canvasLocation" x="108" y="-19.5"/>
         </scene>
     </scenes>
     <resources>

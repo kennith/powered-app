@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Using this class to move data between ViewController
 class RecordedAudio:NSObject {
 	var filePathUrl:NSURL!
 	var title:String!

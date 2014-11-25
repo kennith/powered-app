@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="n4d-sF-yxQ" secondAttribute="centerY" id="2bW-5g-ynZ"/>
                             <constraint firstItem="oez-hl-AGR" firstAttribute="top" secondItem="n4d-sF-yxQ" secondAttribute="bottom" constant="73" id="FBb-lG-q62"/>
@@ -140,12 +140,34 @@
                                     <action selector="StopAction:" destination="DEo-Vh-xit" eventType="touchUpInside" id="SgP-Vy-pbv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMt-Oh-b2h">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlayChipmunkAction:" destination="DEo-Vh-xit" eventType="touchUpInside" id="yyP-Jd-be4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Q3-JJ-E5u">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="dark-vader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlayDarthVadarAction:" destination="DEo-Vh-xit" eventType="touchUpInside" id="rYv-sQ-ieK"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Q3-JJ-E5u" secondAttribute="trailing" constant="50" id="C0N-jT-biO"/>
+                            <constraint firstItem="0Q3-JJ-E5u" firstAttribute="top" secondItem="AQL-hF-6s4" secondAttribute="bottom" constant="62" id="OYS-cI-QyJ"/>
                             <constraint firstAttribute="centerX" secondItem="Pzo-Q4-kd6" secondAttribute="centerX" constant="-1" id="WbL-fJ-HiN"/>
                             <constraint firstItem="ipI-0N-Sjd" firstAttribute="leading" secondItem="ofL-WW-cWv" secondAttribute="leadingMargin" constant="50" id="f43-9C-opR"/>
                             <constraint firstItem="W6v-SA-Q9a" firstAttribute="top" secondItem="Pzo-Q4-kd6" secondAttribute="bottom" constant="85" id="klF-ga-UlG"/>
+                            <constraint firstItem="zMt-Oh-b2h" firstAttribute="top" secondItem="ipI-0N-Sjd" secondAttribute="bottom" constant="62" id="oIL-Uu-o06"/>
+                            <constraint firstItem="zMt-Oh-b2h" firstAttribute="leading" secondItem="ofL-WW-cWv" secondAttribute="leadingMargin" constant="50" id="s56-2b-oo2"/>
                             <constraint firstItem="AQL-hF-6s4" firstAttribute="top" secondItem="Adp-Ji-3KN" secondAttribute="bottom" constant="100" id="tE3-6z-pcj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AQL-hF-6s4" secondAttribute="trailing" constant="50" id="vHU-bu-yzu"/>
                             <constraint firstItem="ipI-0N-Sjd" firstAttribute="top" secondItem="Adp-Ji-3KN" secondAttribute="bottom" constant="100" id="yOY-kP-IDj"/>
@@ -155,14 +177,20 @@
                                 <exclude reference="ipI-0N-Sjd"/>
                                 <exclude reference="AQL-hF-6s4"/>
                                 <exclude reference="Pzo-Q4-kd6"/>
+                                <exclude reference="zMt-Oh-b2h"/>
+                                <exclude reference="0Q3-JJ-E5u"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="klF-ga-UlG"/>
-                                <exclude reference="tE3-6z-pcj"/>
-                                <exclude reference="vHU-bu-yzu"/>
-                                <exclude reference="WbL-fJ-HiN"/>
                                 <exclude reference="f43-9C-opR"/>
                                 <exclude reference="yOY-kP-IDj"/>
+                                <exclude reference="oIL-Uu-o06"/>
+                                <exclude reference="s56-2b-oo2"/>
+                                <exclude reference="tE3-6z-pcj"/>
+                                <exclude reference="vHU-bu-yzu"/>
+                                <exclude reference="C0N-jT-biO"/>
+                                <exclude reference="OYS-cI-QyJ"/>
+                                <exclude reference="WbL-fJ-HiN"/>
+                                <exclude reference="klF-ga-UlG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -170,14 +198,20 @@
                                 <include reference="ipI-0N-Sjd"/>
                                 <include reference="AQL-hF-6s4"/>
                                 <include reference="Pzo-Q4-kd6"/>
+                                <include reference="zMt-Oh-b2h"/>
+                                <include reference="0Q3-JJ-E5u"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="klF-ga-UlG"/>
-                                <include reference="tE3-6z-pcj"/>
-                                <include reference="vHU-bu-yzu"/>
-                                <include reference="WbL-fJ-HiN"/>
                                 <include reference="f43-9C-opR"/>
                                 <include reference="yOY-kP-IDj"/>
+                                <include reference="oIL-Uu-o06"/>
+                                <include reference="s56-2b-oo2"/>
+                                <include reference="tE3-6z-pcj"/>
+                                <include reference="vHU-bu-yzu"/>
+                                <include reference="C0N-jT-biO"/>
+                                <include reference="OYS-cI-QyJ"/>
+                                <include reference="WbL-fJ-HiN"/>
+                                <include reference="klF-ga-UlG"/>
                             </mask>
                         </variation>
                     </view>
@@ -206,6 +240,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
+        <image name="dark-vader" width="100" height="100"/>
         <image name="microphone" width="48" height="48"/>
         <image name="rabbit" width="100" height="100"/>
         <image name="snail" width="100" height="100"/>

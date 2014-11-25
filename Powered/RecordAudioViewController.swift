@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+// added the AVAudioRecorderDelegate because we want to transfer the audio file from one class to another class. In this assignment, we created a class called RecordedAudio to pass the variables.
 class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
 	
 	@IBOutlet weak var recordLabel: UILabel!
@@ -24,6 +25,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
 	}
 	
 	override func viewWillAppear(animated: Bool) {
+		// Initialize the items according to UX
 		stopButton.hidden = true
 		recordLabel.hidden = true
 		microphoneButton.enabled = true
@@ -35,7 +37,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
 	}
 	
 	@IBAction func recordAction(sender: UIButton) {
-		// TODO:  Record user audio
+		// Initialize the filename and where to put the file
 		let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
 		let currentDateTime = NSDate()
 		let formatter = NSDateFormatter()
@@ -44,6 +46,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
 		let pathArray = [dirPath, recordingName]
 		let filePath = NSURL.fileURLWithPathComponents(pathArray)
 		println(filePath)
+		
 		var session = AVAudioSession.sharedInstance()
 		session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
 		
@@ -51,21 +54,23 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
 		audioRecorder.delegate = self
 		audioRecorder.meteringEnabled = true
 		audioRecorder.record()
-		
-		
+	
+		// UX change
 		recordLabel.hidden = false
 		microphoneButton.enabled = false
 		stopButton.hidden = false
+		
 		println("Button Click")
 	}
 	
+	// The Segue is the link between RecordAudioViewController and the PlayAudioViewController
+	// This function is from AVAudioRecorderDelegate
 	func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
-		// TODO: 
 		if(flag) {
 			recordedAudio = RecordedAudio()
 			recordedAudio.filePathUrl = recorder.url
 			recordedAudio.title = recorder.url.lastPathComponent
-			// TODO: Segue
+			// stopRecording is defined from the connector
 			performSegueWithIdentifier("stopRecording", sender: recordedAudio)
 		} else {
 			println("segue did not complete")
@@ -75,6 +80,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
 		
 	}
 	
+	// prepareForSegue is from parent UIViewController
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if(segue.identifier == "stopRecording") {
 			let playSoundVC:PlayAudioViewController = segue.destinationViewController as PlayAudioViewController
